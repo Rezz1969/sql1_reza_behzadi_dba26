@@ -21,7 +21,7 @@ services:
   sqlcl:
     image: container-registry.oracle.com/database/sqlcl:latest
     container_name: sqlcl
-    profiles: ["tools"]
+    profiles: ["tools"]        # not started by a plain `up`
     depends_on:
       oracle-free:
         condition: service_healthy
@@ -35,5 +35,5 @@ services:
     tty: true
     entrypoint: ["sql"]
 
-  volumes:
-    oradata:
+volumes:
+  oradata:
