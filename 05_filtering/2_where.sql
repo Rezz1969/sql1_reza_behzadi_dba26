@@ -1,0 +1,8 @@
+SET PAGESIZE 100;
+
+SELECT * FROM amazon
+FETCH FIRST 5 ROWS ONLY;
+
+DESC system.amazon;
+
+EXIT
