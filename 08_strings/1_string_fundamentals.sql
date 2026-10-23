@@ -5,7 +5,6 @@ SELECT
     'total: ' || 42 AS implicit_type_conversion,
     '' AS null_col;
 
-
 -- string functions
 
 -- case function and length
@@ -22,5 +21,10 @@ SELECT
     SUBSTR(s, -3) AS last_three
 FROM
     (SELECT 'Oracle SQL' AS s);
+
+
+-- searching with INSTR (in string)
+SELECT
+    INSTR ('idempotent operation', 'operation') AS first_occ;
 
 EXIT
